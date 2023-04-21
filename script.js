@@ -58,11 +58,11 @@ window.onload = function () {
 };
 
 function clickbutton1() {
-  window.location.href = "/Pages/Proxies/Proxies";
+  window.location.href = "/Proxies";
 }
 
 function clickbutton2() {
-  window.location.href = "/Pages/SuggestionForm/Suggestion";
+  window.location.href = "/Suggestion";
 }
 
 // Wait for the page to load
