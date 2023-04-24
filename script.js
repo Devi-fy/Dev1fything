@@ -65,6 +65,10 @@ function clickbutton2() {
   window.location.href = "/Suggestion";
 }
 
+function clickbutton3() {
+  window.location.href = "/chat";
+}
+
 // Wait for the page to load
 window.addEventListener('load', () => {
   // Add the "active" class to the body element
