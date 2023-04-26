@@ -36,7 +36,17 @@ html, body, div, iframe
   function start() {
     url = prompt("What url do you want to visit? \nexample: https://google.com/ \nMUST HAVE HTTPS:// IN URL!", "https://google.com/");
     url2 = "https://rogue-app.xyz";
-    done = url2.concat("/~uv/").concat(encodeURIComponent(url));
+    done = ""
+    if (url.startsWith("https://")) {
+      done = url2.concat("/~uv/").concat(encodeURIComponent(url));
+    }
+    else if (url.startsWith("http://")) {
+      done = url2.concat("/~uv/").concat(encodeURIComponent(url));
+    }
+    else {
+      done = url2.concat("/~uv/").concat(encodeURIComponent("https://".concat(url));
+    }
+    
     document.getElementById('iframer').src = done;
   };
   start()
