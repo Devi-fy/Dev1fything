@@ -34,11 +34,10 @@ html, body, div, iframe
 
 <script>
   function start() {
-    url = prompt("What url do you want to visit? \nexample: https://google.com/", "https://google.com/");
+    url = prompt("What url do you want to visit? \nexample: https://google.com/ \nMUST HAVE HTTPS:// IN URL!", "https://google.com/");
     url2 = "https://rogue-app.xyz";
     done = url2.concat("/~uv/").concat(encodeURIComponent(url));
     document.getElementById('iframer').src = done;
   };
-
   start()
 </script>
