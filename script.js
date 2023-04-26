@@ -57,15 +57,11 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
-function clickbutton1() {
-  window.location.href = "/proxies";
-}
-
 function clickbutton2() {
   window.location.href = "/suggestion";
 }
 
-function clickbutton3() {
+function clickbutton1() {
   window.location.href = "/chat";
 }
 
