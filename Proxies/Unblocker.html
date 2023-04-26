@@ -1,6 +1,7 @@
 <body class="fade-in">
-  <title>GENARCY</title>
+  <title>Unblocker</title>
     <iframe
+      id="iframer"
       src="about:blank"
       allowfullscreen="true"
       width="100%"
@@ -36,7 +37,7 @@ html, body, div, iframe
     url = prompt("What url do you want to visit?", "https://google.com/");
     url2 = "https://rogue-app.xyz";
     done = url2.concat("/~uv/").concat(encodeURIComponent(url1));
-    window.location.href = done;
+    document.getElementById('iframer').src = done;
   };
 
   start()
