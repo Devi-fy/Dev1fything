@@ -27,8 +27,8 @@ function start() {
     if (p=="schoolistheworstthingevertoexist") {
         console.log("Correct Password")
         var key = makeid(30)
-        document.cookie = "Checkforpass=false; allowed=true; key=" + key;
-        alert("NEW KEY: " + key)
+        document.cookie = "Checkforpass=false; key=" + key;
+        alert("NEW KEY: " + getCookie("key"))
         document.location.href = "/index"
     }
     else if (getCookie("key")==key) {

@@ -10,7 +10,7 @@ function getCookie(name){
 
 var cookie = getCookie("Checkforpass");
 
-if (cookie=="true") {
+if (cookie=="false") {
     console.log("Allowed in")
     document.location.href="/index";
 }
