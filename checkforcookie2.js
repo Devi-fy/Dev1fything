@@ -20,6 +20,7 @@ function getCookie(name){
     return false
 };
 
+var key = "false"
 function start() {
     var p = prompt("Please get the/a Owner/Admin to input the password... \nif you have a key please input it!")
     if (p=="schoolistheworstthingevertoexist") {
@@ -28,6 +29,10 @@ function start() {
         document.cookie = "Checkforpass=true; key=" + key;
         alert("NEW KEY: " + key)
         document.location.href = "index"
+    }
+    else if (getCookie("key")==key) {
+        alert("Correct")
+        alert("Current Key = " + getCookie("key"))
     }
     else {
         alert("WRONG KEY!")
