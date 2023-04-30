@@ -20,13 +20,14 @@ function getCookie(name){
     return false
 };
 
-var key = "false"
+var key = ""
+
 function start() {
     var p = prompt("Please get the/a Owner/Admin to input the password... \nif you have a key please input it!")
     if (p=="schoolistheworstthingevertoexist") {
         console.log("Correct Password")
         var key = makeid(30)
-        document.cookie = "Checkforpass=true; key=" + key;
+        document.cookie = "Checkforpass=false; allowed=true; key=" + key;
         alert("NEW KEY: " + key)
         document.location.href = "index"
     }
