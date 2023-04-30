@@ -21,7 +21,7 @@ function getCookie(name){
 };
 
 if (getCookie("Checkforpass")==false) {
-    document.href = "/index"
+    document.location.href = "/index"
 }
 
 function start() {
