@@ -32,3 +32,5 @@ function start() {
         alert("Correct!")
     }
 };
+
+start()
