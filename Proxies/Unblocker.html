@@ -72,8 +72,9 @@ html, body, div, iframe
 
 var Iframe = document.getElementById('iframer');
 Iframe.addEventListener("load", function() {
+  console.log("Loaded")
   var spinner = document.getElementById('spinner')
-  spinner.remove
+  spinner.remove()
 });
 
   function start() {
