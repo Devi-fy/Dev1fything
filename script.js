@@ -58,7 +58,7 @@ window.onload = function () {
 };
 
 function signout() {
-  document.cookie = "Checkforpass=false; key=false";
+  document.cookie = "Checkforpass=false";
   window.location.href = "/waitforpass.html"
 }
 

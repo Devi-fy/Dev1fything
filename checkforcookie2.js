@@ -29,11 +29,12 @@ function start() {
         var key = makeid(30)
         document.cookie = "Checkforpass=false; allowed=true; key=" + key;
         alert("NEW KEY: " + key)
-        document.location.href = "index"
+        document.location.href = "/index"
     }
     else if (getCookie("key")==key) {
         alert("Correct")
         alert("Current Key = " + getCookie("key"))
+        document.location.href = "/index"
     }
     else {
         alert("WRONG KEY!")
