@@ -20,7 +20,7 @@ function getCookie(name){
     return false
 };
 
-if (getCookie(Checkforpass)==false) {
+if (getCookie("Checkforpass")==false) {
     document.href = "/index"
 }
 
