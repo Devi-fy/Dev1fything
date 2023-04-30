@@ -58,8 +58,11 @@ window.onload = function () {
 };
 
 function signout() {
-  document.cookie = "Checkforpass=true";
-  window.location.href = "/waitforpass.html"
+  if (confirm("Are you sure? \nif you do this you will have to login again!")) {
+    alert("Signed Out!")
+    document.cookie = "Checkforpass=true";
+    window.location.href = "/waitforpass.html"
+  }
 }
 
 function clickbutton2() {
