@@ -62,6 +62,8 @@ function signout() {
     alert("Signed Out!")
     document.cookie = "Checkforpass=true";
     window.location.href = "/waitforpass.html"
+  } else {
+    window.location.href = "/index"
   }
 }
 
