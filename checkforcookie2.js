@@ -25,17 +25,10 @@ if (getCookie("Checkforpass")==false) {
 }
 
 function start() {
-    var p = prompt("Please get the/a Owner/Admin to input the password... \nif you have a key please input it!")
+    var p = prompt("Please get the/a Owner/Admin to input the password...")
     if (p=="schoolistheworstthingevertoexist") {
         console.log("Correct Password")
-        var randomthing = makeid(30)
-        document.cookie = "Checkforpass=false; key=".concat(randomthing).concat(";");
-        alert("NEW KEY: " + randomthing)
-        document.location.href = "/index"
-    }
-    else if (p==getCookie("key")) {
-        alert("Correct")
-        alert("Current Key = " + getCookie("key"))
+        document.cookie = "Checkforpass=false;";
         document.location.href = "/index"
     }
     else {
