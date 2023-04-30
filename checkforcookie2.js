@@ -24,12 +24,18 @@ function start() {
     var p = prompt("Please get the/a Owner/Admin to input the password... \nif you have a key please input it!")
     if (p=="schoolistheworstthingevertoexist") {
         console.log("Correct Password")
-        var key = makeid(length)
+        var key = makeid(30)
         document.cookie = "Checkforpass=true; key=" + key;
         alert("NEW KEY: " + key)
+        document.location.href = "index"
     }
     else if (p==getCookie("key")) {
         alert("Correct!")
+        document.location.href = "index"
+    }
+    else {
+        alert("WRONG KEY!")
+        start()
     }
 };
 

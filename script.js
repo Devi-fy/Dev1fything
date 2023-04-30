@@ -57,6 +57,10 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
+function signout() {
+  document.cookie = "allowed=false; key="
+}
+
 function clickbutton2() {
   window.location.href = "/suggestion";
 }
