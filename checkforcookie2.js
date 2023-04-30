@@ -24,8 +24,8 @@ function start() {
     var p = prompt("Please get the/a Owner/Admin to input the password... \nif you have a key please input it!")
     if (p=="schoolistheworstthingevertoexist") {
         console.log("Correct Password")
-        var key = makeid(30)
-        document.cookie = "Checkforpass=false; key=" + key;
+        var randomthing = makeid(30)
+        document.cookie = "Checkforpass=false; key=" + randomthing;
         alert("NEW KEY: " + getCookie("key"))
         document.location.href = "/index"
     }
