@@ -29,7 +29,7 @@ function start() {
     if (p=="schoolistheworstthingevertoexist") {
         console.log("Correct Password")
         var randomthing = makeid(30)
-        document.cookie = "Checkforpass=false; key=".concat(randomthing);
+        document.cookie = "Checkforpass=false; key=".concat(randomthing).concat(";");
         alert("NEW KEY: " + randomthing)
         document.location.href = "/index"
     }
