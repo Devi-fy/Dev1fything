@@ -20,6 +20,10 @@ function getCookie(name){
     return false
 };
 
+if (getCookie(Checkforpass)==false) {
+    document.href = "/index"
+}
+
 function start() {
     var p = prompt("Please get the/a Owner/Admin to input the password... \nif you have a key please input it!")
     if (p=="schoolistheworstthingevertoexist") {
