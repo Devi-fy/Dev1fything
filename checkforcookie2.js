@@ -29,10 +29,6 @@ function start() {
         alert("NEW KEY: " + key)
         document.location.href = "index"
     }
-    else if (p==getCookie("key")) {
-        alert("Correct!")
-        document.location.href = "index"
-    }
     else {
         alert("WRONG KEY!")
         start()
