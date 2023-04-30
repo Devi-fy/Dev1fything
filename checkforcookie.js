@@ -12,7 +12,6 @@ var cookie = getCookie("Checkforpass");
 
 if (cookie=="false") {
     console.log("Allowed in")
-    document.location.href="/index";
 }
 else {
     document.location.href="waitforpass.html";
