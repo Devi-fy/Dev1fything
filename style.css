@@ -131,6 +131,11 @@ li a:hover {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  transition: background-color 1s;
+}
+
+.button:hover {
+  background-color: #c54b26;
 }
 
 .button span {
