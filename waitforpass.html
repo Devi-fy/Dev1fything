@@ -1,7 +1,109 @@
 <!DOCTYPE html>
 <html>
-    <script src="/checkforcookie2.js" defer></script>
-    <body>
-        <h1>Waiting for input...</h1>
-    </body>
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			text-align: center;
+			padding-top: 100px;
+		}
+		h1 {
+			color: #555;
+			font-weight: normal;
+		}
+		form {
+			display: inline-block;
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #555;
+		}
+		input[type="text"],
+		input[type="password"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 250px;
+			font-size: 16px;
+			margin-bottom: 20px;
+			display: block;
+			box-sizing: border-box;
+			outline: none;
+		}
+		button[type="submit"] {
+			background-color: #007bff;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		button[type="submit"]:hover {
+			background-color: #0069d9;
+		}
+		.alert {
+			display: none;
+			background-color: #ff4d4d;
+			color: #fff;
+			padding: 10px;
+			margin-top: 10px;
+			border-radius: 5px;
+			max-width: 250px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>Welcome to my website!</h1>
+	<form>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username" required>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+
+		<button type="submit" onclick="checkLogin()">Login</button>
+	</form>
+
+	<div class="alert" id="alert">
+		Incorrect username or password. Please try again.
+	</div>
+
+	<script>
+        function getCookie(name){
+    var pattern = RegExp(name + "=.[^;]*")
+    var matched = document.cookie.match(pattern)
+    if(matched){
+        var cookie = matched[0].split('=')
+        return cookie[1]
+    }
+    return false
+};
+
+if (getCookie("Checkforpass")==false) {
+    document.location.href = "/index"
+}
+		function checkLogin() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			if (username === "guest" && password === "schoolistheworstthingevertoexist") {
+                document.cookie = "Checkforpass=false;";
+				window.location.href = "/index";
+			} else {
+				document.getElementById("alert").style.display = "block";
+			}
+		}
+	</script>
+</body>
 </html>
