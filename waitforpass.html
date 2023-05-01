@@ -98,12 +98,12 @@ if (getCookie("Checkforpass")==false) {
 			var password = document.getElementById("password").value;
 
 			if (username === "guest" && password === "schoolistheworstthingevertoexist") {
-				console.log("Not correct");
+				console.log("Correct");
                 document.cookie = "Checkforpass=false;";
-				document.location.href = "/index";
+				document.location.href = "/index.html";
 			} else {
 				document.getElementById("alert").style.display = "block";
-				console.log("Correct")
+				console.log("Not Correct")
 			}
 		};
 	</script>
