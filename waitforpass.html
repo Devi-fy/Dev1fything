@@ -25,7 +25,6 @@
 			margin-bottom: 10px;
 			color: #555;
 		}
-		input[type="text"],
 		input[type="password"] {
 			padding: 10px;
 			border-radius: 5px;
@@ -66,9 +65,6 @@
 <body>
 	<h1>Login</h1>
 	<form>
-		<label for="username">Username:</label>
-		<input type="text" id="username" name="username" required>
-
 		<label for="password">Password:</label>
 		<input type="password" id="password" name="password" required>
 
@@ -97,10 +93,9 @@ if (getCookie("Checkforpass")==false) {
     redirectindex()
 }
 		function checkLogin() {
-			var username = document.getElementById("username").value;
 			var password = document.getElementById("password").value;
 
-			if (username === "guest" && password === "schoolistheworstthingevertoexist") {
+			if (password === "schoolistheworstthingevertoexist") {
 				console.log("Correct");
                 document.cookie = "Checkforpass=false;";
 				redirectindex()
