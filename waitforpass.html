@@ -100,7 +100,7 @@ if (getCookie("Checkforpass")==false) {
 			if (username === "guest" && password === "schoolistheworstthingevertoexist") {
 				console.log("Correct");
                 document.cookie = "Checkforpass=false;";
-				document.location.href = "/index.html";
+				document.location.href = "/redirectindex";
 			} else {
 				document.getElementById("alert").style.display = "block";
 				console.log("Not Correct")
