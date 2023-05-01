@@ -4,9 +4,12 @@ text-align: center;
 
 }
 
-h1,
-h2 {
+h1 {
   font-size: 50px;
+  transition: color 1s;
+}
+
+h2 {
   transition: color 1s;
 }
 
