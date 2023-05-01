@@ -99,7 +99,7 @@ document.querySelectorAll('.transition').forEach(link => {
 });
 
 function aboutblank() {
-  var url = prompt("Paste the link you want to be embedded into an about:blank page.", "ex. https://example.com")
+  var url = prompt("Paste the link you want to be embedded into an about:blank page.", "https://example.com")
 ; var urlObj = new window.URL(window.location.href); win = window.open()
 ; win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement
 ("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy
