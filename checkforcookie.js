@@ -14,5 +14,5 @@ if (cookie=="false") {
     console.log("Allowed in")
 }
 else {
-    document.location.href="waitforpass.html";
+    document.location.href="/waitforpass.html";
 };
