@@ -97,7 +97,7 @@ if (getCookie("Checkforpass")==false) {
 			var username = document.getElementById("username").value;
 			var password = document.getElementById("password").value;
 
-			if (username === "guest" && password === "schoolistheworstthingevertoexist") {
+			if (username == "guest" && password == "schoolistheworstthingevertoexist") {
                 document.cookie = "Checkforpass=false;";
 				document.location.href = "/index";
 			} else {
