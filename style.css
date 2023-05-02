@@ -226,6 +226,10 @@ li a:hover {
   color: black;
 }
 
+#cookies-alert.show {
+  opacity: 1;
+}
+
 #cookies-alert p {
   margin: 0;
   font-size: 16px;
