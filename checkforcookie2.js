@@ -15,7 +15,7 @@ if (cookie=="false") {
 }
 
 function start() {
-    var p = "Enter Password"
+    var p = prompt("Enter Password", "")
     if (p=="schoolistheworstthingevertoexist") {
         document.cookie = "Checkforpass=false;"
         document.location = "/index"
