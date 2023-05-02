@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<form method="POST" action="login.php">
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password" required>
-		<br>
-		<input type="submit" value="Login">
-	  </form>
-	  <style>
+	<title>Login Page</title>
+	<style>
 		body {
-  font-family: Arial, sans-serif;
-}
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			text-align: center;
+			padding-top: 100px;
+		}
+		h1 {
+			color: #555;
+			font-weight: normal;
+		}
+		form {
+			display: inline-block;
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #555;
+		}
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 250px;
+			font-size: 16px;
+			margin-bottom: 20px;
+			display: block;
+			box-sizing: border-box;
+			outline: none;
+		}
+		button[type="submit"] {
+			background-color: #007bff;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+		button[type="submit"]:hover {
+			background-color: #0069d9;
+		}
+		.alert {
+			display: none;
+			background-color: #ff4d4d;
+			color: #fff;
+			padding: 10px;
+			margin-top: 10px;
+			border-radius: 5px;
+			max-width: 250px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>Login</h1>
+	<form>
 
-label {
-  display: block;
-  margin-bottom: 10px;
-}
+		<label for="password">Password:</label>
+		<input type="text" id="password" name="password" required>
 
-input[type=password] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
+		<button type="submit" onclick="checkLogin()">Login</button>
+	</form>
 
-input[type=submit] {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-}
+	<div class="alert" id="alert">
+		Incorrect username or password. Please try again.
+	</div>
 
-input[type=submit]:hover {
-  background-color: #3e8e41;
-}
-
-	  </style>	  
 	<script>
         function getCookie(name){
     var pattern = RegExp(name + "=.[^;]*")
@@ -52,34 +89,21 @@ input[type=submit]:hover {
 function redirectindex() {
 	document.location.href = "/index"
 }
-
 if (getCookie("Checkforpass")==false) {
     redirectindex()
 }
-		const passwordInput = document.getElementById("password");
-const loginForm = document.getElementById("login-form");
+		function checkLogin() {
+			var password = document.getElementById("password").value;
 
-loginForm.addEventListener("submit", function(event) {
-  event.preventDefault();
-  if (passwordInput.value === "schoolistheworstthingevertoexist") {
-    console.log("Correct");
-	document.cookie = "Checkforpass=false;";
-	redirectindex()
-  } else if (passwordInput.value === "") {
-    alert("Please enter a password");
-  } else {
-    alert("Incorrect password");
-  }
-});
-
-passwordInput.addEventListener("keyup", function(event) {
-  if (event.getModifierState("CapsLock")) {
-    passwordInput.setCustomValidity("Caps Lock is on");
-  } else {
-    passwordInput.setCustomValidity("");
-  }
-});
-
+			if (password == "schoolistheworstthingevertoexist") {
+				console.log("Correct");
+                document.cookie = "Checkforpass=false;";
+				redirectindex()
+			} else {
+				document.getElementById("alert").style.display = "block";
+				console.log("Not Correct")
+			}
+		};
 	</script>
 </body>
 </html>
