@@ -250,24 +250,3 @@ li a:hover {
 #accept-cookies-btn:hover {
   background-color: #0056b3;
 }
-
-#js-message {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  background-color: #f44336;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
-  z-index: 9999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
-}
-
-#js-message.hidden {
-  opacity: 0;
-}

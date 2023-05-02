@@ -119,12 +119,3 @@ acceptCookiesBtn.addEventListener('click', () => {
 if (localStorage.getItem('accept-cookies')) {
   cookiesAlert.remove();
 }
-
-var jsMessage = document.getElementById('js-message');
-jsMessage.style.display = 'none'; // hide the message by default
-
-if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && typeof window.navigator.userAgent === 'string' && window.navigator.userAgent.indexOf('jsEnabled') !== -1) {
-  jsMessage.style.display = 'none'; // enable the message if JavaScript is enabled
-} else {
-  jsMessage.style.display = 'block'; // show the message if JavaScript is disabled
-}
