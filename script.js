@@ -116,6 +116,7 @@ acceptCookiesBtn.addEventListener('click', () => {
   localStorage.setItem('accept-cookies', 'true');
 });
 
-if (!localStorage.getItem('accept-cookies')) {
+if (!localStorage.getItem('accept-cookies')==true) {
   cookiesAlert.classList.add('show');
+  cookiesAlert.remove()
 }
