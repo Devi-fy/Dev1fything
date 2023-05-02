@@ -112,11 +112,10 @@ const cookiesAlert = document.getElementById('cookies-alert');
 const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
 
 acceptCookiesBtn.addEventListener('click', () => {
-  cookiesAlert.classList.remove('show');
+  cookiesAlert.remove();
   localStorage.setItem('accept-cookies', 'true');
 });
 
-if (!localStorage.getItem('accept-cookies')==true) {
-  cookiesAlert.classList.add('show');
-  cookiesAlert.remove()
+if (localStorage.getItem('accept-cookies')) {
+  cookiesAlert.remove();
 }
