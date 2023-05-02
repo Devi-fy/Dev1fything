@@ -108,14 +108,16 @@ function aboutblank() {
 ("script"); script.src = "https://3kh0.github.io/js/main.js"; win.document.body.appendChild(script); 
 }
 
-const cookiesAlert = document.getElementById('cookies-alert');
-const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
-
-acceptCookiesBtn.addEventListener('click', () => {
-  cookiesAlert.remove();
-  localStorage.setItem('accept-cookies', 'true');
-});
-
-if (localStorage.getItem('accept-cookies')) {
-  cookiesAlert.remove();
-}
+  const cookiesAlert = document.getElementById('cookies-alert');
+  const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+  
+  function acceptCookies() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookiesAlert.remove();
+  }
+  
+  acceptCookiesBtn.addEventListener('click', acceptCookies);
+  
+  if (localStorage.getItem('cookiesAccepted')) {
+    cookiesAlert.remove();
+  }
