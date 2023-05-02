@@ -108,21 +108,14 @@ function aboutblank() {
 ("script"); script.src = "https://3kh0.github.io/js/main.js"; win.document.body.appendChild(script); 
 }
 
-// Check if the cookie exists
-if (document.cookie.indexOf("cookieAlertClosed=true") !== -1) {
-  // If the cookie exists, hide the alert
-  document.getElementById("cookie-alert").style.display = "none";
-} else {
-  // If the cookie does not exist, show the alert
-  document.getElementById("cookie-alert").style.display = "block";
-}
+const cookiesAlert = document.getElementById('cookies-alert');
+const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
 
-// Set the cookie when the user clicks the Accept button
-document.getElementById("accept-cookies").addEventListener("click", function() {
-  var expirationDate = new Date();
-  // Set the cookie to expire 1 year from now
-  expirationDate.setFullYear(expirationDate.getFullYear() + 1);
-  document.cookie = "cookieAlertClosed=true; expires=" + expirationDate.toUTCString();
-  // Hide the alert
-  document.getElementById("cookie-alert").style.display = "none";
+acceptCookiesBtn.addEventListener('click', () => {
+  cookiesAlert.classList.remove('show');
+  localStorage.setItem('accept-cookies', 'true');
 });
+
+if (!localStorage.getItem('accept-cookies')) {
+  cookiesAlert.classList.add('show');
+}
