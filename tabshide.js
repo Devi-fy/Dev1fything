@@ -2,9 +2,10 @@
 const tabIconHide = getCookie('tabiconhide');
 
 while (tabIconHide === 'true') {
-  // Do something if the "tabiconhide" cookie is set to "true"
-  document.querySelector('link[rel="icon"]').href = 'https://www.google.com/favicon.ico';
-  document.title = "Google";
+  if (document.title !== "Google" && document.querySelector("link[rel='shortcut icon']").href !== "https://www.google.com/favicon.ico") {
+    document.querySelector('link[rel="icon"]').href = 'https://www.google.com/favicon.ico';
+    document.title = "Google";
+  }
 }
 
 // Helper function to get a cookie
