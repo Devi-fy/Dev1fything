@@ -75,29 +75,6 @@ function clickbutton1() {
   window.location.href = "/chat";
 }
 
-// Wait for the page to load
-window.addEventListener('load', () => {
-  // Add the "active" class to the body element
-  document.body.classList.add('active');
-});
-
-// When a link with the "transition" class is clicked
-document.querySelectorAll('.transition').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const href = link.getAttribute('href');
-    
-    // Add the "fade-out" class to the body element
-    document.body.classList.add('fade-out');
-    
-    // Wait for the "fade-out" animation to complete
-    setTimeout(() => {
-      // Navigate to the new page
-      window.location.href = href;
-    }, 300); // Change this value to match the duration of the "fade-out" animation
-  });
-});
-
 function aboutblank() {
   document.location.href = "/Other"
   var url = prompt("Paste the link you want to be embedded into an about:blank page.", "https://example.com")
