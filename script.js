@@ -107,22 +107,3 @@ function aboutblank() {
 = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement
 ("script"); script.src = "https://3kh0.github.io/js/main.js"; win.document.body.appendChild(script); 
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-const cookiesAlertContainer = document.getElementById('cookies-alert-container');
-const cookiesAlert = document.getElementById('cookies-alert');
-const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
-
-function acceptCookies() {
-  localStorage.setItem('cookiesAccepted', 'true');
-  cookiesAlertContainer.remove();
-  console.log(acceptCookiesBtn);
-}
-
-acceptCookiesBtn.addEventListener('click', acceptCookies());
-
-if (localStorage.getItem('cookiesAccepted')) {
-  cookiesAlertContainer.remove();
-  console.log(cookiesAlert);
-}
-});
