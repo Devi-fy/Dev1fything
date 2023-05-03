@@ -1,9 +1,8 @@
 // Get the value of the "tabiconhide" cookie
 const tabIconHide = getCookie('tabiconhide');
 
-while (tabIconHide === 'true') {
-  if (document.title === "Google" && document.querySelector("link[rel='shortcut icon']").href === "https://www.google.com/favicon.ico") {
-  } else {
+function checktabiconhide() {
+if (tabIconHide === 'true') {
     document.querySelector('link[rel="icon"]').href = 'https://www.google.com/favicon.ico';
     document.title = "Google";
   }
@@ -25,3 +24,6 @@ function getCookie(name) {
   }
   return "";
 }
+
+checktabiconhide()
+setTimeout(checktabiconhide(), 5000);
