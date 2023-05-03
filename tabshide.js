@@ -1,14 +1,10 @@
 // Get the value of the "tabiconhide" cookie
 const tabIconHide = getCookie('tabiconhide');
 
-if (tabIconHide === 'true') {
+while (tabIconHide === 'true') {
   // Do something if the "tabiconhide" cookie is set to "true"
   document.querySelector('link[rel="icon"]').href = 'https://www.google.com/favicon.ico';
   document.title = "Google";
-} else {
-  // Do something else if the "tabiconhide" cookie is not set or is set to "false"
-  document.querySelector('link[rel="icon"]').href = 'https://cdn.glitch.global/4182429a-2412-45a4-b24a-208c3020ffd7/Amongus.gif?v=1680641785809';
-  document.title = "Dev1fy";
 }
 
 // Helper function to get a cookie
