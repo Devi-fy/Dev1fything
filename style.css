@@ -211,3 +211,9 @@ li a:hover {
 .fancy-button:hover {
   background-color: #c0392b;
 }
+
+.right {
+  position: absolute;
+  right: 0;
+  float: right;
+}
