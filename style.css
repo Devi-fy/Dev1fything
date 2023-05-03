@@ -213,7 +213,10 @@ li a:hover {
 }
 
 .right {
-  position: absolute;
-  right: 0;
   float: right;
+  text-align: right;
+  left: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
