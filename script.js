@@ -88,3 +88,18 @@ function aboutblank() {
 = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement
 ("script"); script.src = "https://3kh0.github.io/js/main.js"; win.document.body.appendChild(script); 
 }
+
+function search() {
+	let input = document.getElementById('searchbar').value
+	input=input.toLowerCase();
+	let x = document.getElementsByClassName('searchlist');
+	
+	for (i = 0; i < x.length; i++) {
+		if (!x[i].innerHTML.toLowerCase().includes(input)) {
+			x[i].style.display="none";
+		}
+		else {
+			x[i].style.display="list-item";				
+		}
+	}
+}

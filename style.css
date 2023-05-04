@@ -220,3 +220,47 @@ li a:hover {
   top: 0;
   right: 0;
 }
+
+ol.list {
+  list-style-type: none;
+}
+
+/* style.css */
+input[type="text"] {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #f3f3f3;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 300px;
+}
+
+input[type="text"]:focus {
+  background-color: #e6e6e6;
+  width: 400px;
+}
+
+input[type="text"]::placeholder {
+  color: #999999;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
