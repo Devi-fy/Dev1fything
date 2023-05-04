@@ -276,8 +276,9 @@ footer {
   text-align: center;
   left: 0;
   font-size: x-small;
+  opacity: 50%;
 }
 
-footer a{
+footer .link{
   font-size: small;
 }
