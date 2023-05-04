@@ -75,7 +75,7 @@ function clickbutton1() {
   window.location.href = "/chat";
 }
 
-function clickbutton1() {
+function clickbutton3() {
   window.location.href = "/bug";
 }
 
