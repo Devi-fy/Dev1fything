@@ -13,6 +13,14 @@
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
     <script src="/tabshide.js" defer></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf2j-AlAAAAANewIbsu9MQlo2yV0UF_39fyskZG"></script>
+<script>
+grecaptcha.enterprise.ready(function() {
+    grecaptcha.enterprise.execute('6Lf2j-AlAAAAANewIbsu9MQlo2yV0UF_39fyskZG', {action: 'login'}).then(function(token) {
+      ...
+    });
+});
+</script>
   </head>
   <body>
     <!-- this is the start of content -->
