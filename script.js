@@ -75,6 +75,10 @@ function clickbutton1() {
   window.location.href = "/chat";
 }
 
+function clickbutton1() {
+  window.location.href = "/bug";
+}
+
 function aboutblank() {
   document.location.href = "/Other"
   var url = prompt("Paste the link you want to be embedded into an about:blank page.", "https://example.com")
