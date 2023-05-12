@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 
 document.addEventListener('mousemove', function (e) {
-  cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+  var cx = e.clientX;
+  var cy = e.clientY;
+  var cxd = e.clientX -= 6;
+  var cyd = e.clientY -= 10;
+  cursor.style.transform = 'translate(' + cxd + 'px, ' + cyd + 'px)';
+  cursor.style.display = 'block';
 });
 
 var TxtType = function (el, toRotate, period) {
