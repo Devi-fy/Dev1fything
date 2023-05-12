@@ -280,10 +280,5 @@ input[type="submit"]:hover {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.2s ease;
-}
-
-#custom-cursor.clicked {
-  transform: translate(-50%, -50%) scale(0.8); /* Smaller size when clicked */
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
