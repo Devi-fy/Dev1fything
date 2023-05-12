@@ -117,4 +117,3 @@ cursor.addEventListener('mousedown', function () {
 cursor.addEventListener('mouseup', function () {
   cursor.classList.remove('clicked');
 });
-
