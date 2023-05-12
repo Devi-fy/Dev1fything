@@ -266,7 +266,7 @@ input[type="submit"]:hover {
 }
 
 .activenav {
-  background-color: white;
+  background-color: rgb(212, 132, 34);
 }
 
 #custom-cursor {
@@ -280,5 +280,5 @@ input[type="submit"]:hover {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.01s ease;
+  transition: transform 0.05s ease;
 }
