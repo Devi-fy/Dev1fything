@@ -68,16 +68,6 @@ window.onload = function () {
   document.body.appendChild(css);
 };
 
-function signout() {
-  if (confirm("Are you sure? \nif you do this you will have to login again!")) {
-    alert("Signed Out!")
-    document.cookie = "Checkforpass=true";
-    window.location.href = "/waitforpass.html"
-  } else {
-    window.location.href = "/index"
-  }
-}
-
 function clickbutton2() {
   window.location.href = "/suggestion";
 }
@@ -91,7 +81,6 @@ function clickbutton3() {
 }
 
 function aboutblank() {
-  document.location.href = "/Other"
   var url = prompt("Paste the link you want to be embedded into an about:blank page.", "https://example.com")
 ; var urlObj = new window.URL(window.location.href); win = window.open()
 ; win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement
