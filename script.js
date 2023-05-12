@@ -103,3 +103,18 @@ function search() {
 		}
 	}
 }
+
+var cursor = document.getElementById('custom-cursor');
+
+document.addEventListener('mousemove', function (e) {
+  cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+});
+
+cursor.addEventListener('mousedown', function () {
+  cursor.classList.add('clicked');
+});
+
+cursor.addEventListener('mouseup', function () {
+  cursor.classList.remove('clicked');
+});
+

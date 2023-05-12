@@ -269,3 +269,36 @@ input[type="submit"]:hover {
 .activenav {
   background-color: rgb(212, 132, 34);
 }
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+#custom-cursor.clicked {
+  transform: translate(-50%, -50%) scale(0.8); /* Smaller size when clicked */
+  transition: transform 0.2s ease;
+}
