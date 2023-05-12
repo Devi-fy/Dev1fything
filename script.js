@@ -2,6 +2,7 @@ var cursor = document.getElementById('custom-cursor');
 
 document.addEventListener("DOMContentLoaded", function(e) {
   cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+  cursor.style.display = 'block';
 });
 
 document.addEventListener('mousemove', function (e) {
