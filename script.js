@@ -1,3 +1,13 @@
+var cursor = document.getElementById('custom-cursor');
+
+document.addEventListener("DOMContentLoaded", function(e) {
+  cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+});
+
+document.addEventListener('mousemove', function (e) {
+  cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+});
+
 var TxtType = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
@@ -103,9 +113,3 @@ function search() {
 		}
 	}
 }
-
-var cursor = document.getElementById('custom-cursor');
-
-document.addEventListener('mousemove', function (e) {
-  cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
-});
